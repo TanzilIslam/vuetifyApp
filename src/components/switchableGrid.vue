@@ -8,16 +8,16 @@
     </div>
     <ul v-if="layout == 'grid'" class="grid">
         <!-- A view with big photos and no text -->
-        <li v-for="a in articles" v-bind:key="a">
+        <li v-for="(a,index) in articles" v-bind:key="index">
             <a v-bind:href="a.url" target="_blank"><img v-bind:src="a.image.large" /></a>
         </li>
     </ul>
 
     <ul v-if="layout == 'list'" class="list">
         <!-- A compact view smaller photos and titles -->
-        <li v-for="a in articles" v-bind:key="a">
-            <a v-bind:href="a.url" target="_blank"><img v-bind:src="a.image.small" /></a>
-            <p>{{a.title}}</p>
+        <li v-for="(b,index) in articles" v-bind:key="index">
+            <a v-bind:href="b.url" target="_blank"><img v-bind:src="b.image.small" /></a>
+            <p>{{b.title}}</p>
         </li>
     </ul>
 

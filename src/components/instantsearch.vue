@@ -9,7 +9,7 @@
     </div>
 
     <ul>
-        <li v-for="article in filteredArticles" v-bind:key="article">
+        <li v-for="(article,index) in filteredArticles" v-bind:key="index">
             <a v-bind:href="article.url"><img v-bind:src="article.image" /></a>
             <p>{{article.title}}</p>
         </li>

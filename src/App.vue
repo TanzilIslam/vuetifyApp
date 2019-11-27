@@ -1,61 +1,51 @@
 <template>
-  <v-app  app>
+  <v-app app>
     <v-content :aspect-ratio="16/9">
-      
-      <navbar/>
-      <inlineEditor/>
-      <orderform/>
-
       <v-container grid-list-xl>
         <v-layout v-bind="binding">
-      <v-flex>
-        <v-card  color="primary">
-          <instantsearch/>
-          </v-card>
-      </v-flex>
-      <v-flex>
-        <v-card  color="secondary">
-              <switchableGrid/>
-          </v-card>
-      </v-flex>
-      </v-layout>
+          <navbar />
+          <inlineEditor />
+          <orderform />
+          <instantsearch />
+          <switchableGrid />
+          <Card/>
+        </v-layout>
       </v-container>
-      
-  
-      </v-content>
+    </v-content>
   </v-app>
 </template>
 
 <script>
-import navbar from './components/navbarComponent.vue'
-import inlineEditor from './components/inlineEditor.vue'
-import orderform from './components/orderform.vue'
-import instantsearch from './components/instantsearch.vue'
-import switchableGrid from './components/switchableGrid.vue'
-
+import navbar from "./components/navbarComponent.vue";
+import inlineEditor from "./components/inlineEditor.vue";
+import orderform from "./components/orderform.vue";
+import instantsearch from "./components/instantsearch.vue";
+import switchableGrid from "./components/switchableGrid.vue";
+import Card from "./components/Card.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     navbar,
     inlineEditor,
     orderform,
     instantsearch,
-    switchableGrid
+    switchableGrid,
+    Card
   },
-  data () {
+  data() {
     return {
       //
-    }
+    };
   },
   computed: {
-      binding () {
-        const binding = {}
+    binding() {
+      const binding = {};
 
-        if (this.$vuetify.breakpoint.mdAndUp) binding.column = true
+      if (this.$vuetify.breakpoint.mdAndUp) binding.column = true;
 
-        return binding
-      }
+      return binding;
     }
-}
+  }
+};
 </script>

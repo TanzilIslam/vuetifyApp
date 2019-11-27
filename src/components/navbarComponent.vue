@@ -1,6 +1,6 @@
 <template>
   <div class="helloNav" >
-    <v-toolbar prominent="true" color="purple" dark class="mb-5">
+    <v-toolbar  color="purple" dark class="mb-5">
       <v-toolbar-title>Vue Components</v-toolbar-title>
 
       <v-spacer></v-spacer>

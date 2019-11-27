@@ -6,19 +6,19 @@
           <h1>Services</h1>
           <ul>
             <li
-              v-bind:key="service"
-              v-for="service in services"
+              
+              v-for="(service,index) in services" :key="index"
               v-on:click="toggleActive(service)"
               v-bind:class="{ 'active': service.active}"
             >
               {{service.name}}
-              <span>{{service.price | currency}}</span>
+              <span>{{service.price}}$</span>
             </li>
           </ul>
 
           <div class="total">
             Total:
-            <span>{{total() | currency}}</span>
+            <span>{{total()}}$</span>
           </div>
           <v-btn btn v-if="show">
             <v-icon size="25">add_shopping_cart</v-icon>Add To Cart
