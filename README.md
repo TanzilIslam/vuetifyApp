@@ -1,5 +1,4 @@
-# navbar
-
+Components Collection
 ## Project setup
 ```
 npm install
